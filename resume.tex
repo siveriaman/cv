@@ -1,21 +1,241 @@
-% vim:foldmethod=marker commentstring=%%%s
-% license {{{
-% This work is licensed under the Creative Commons
-% Attribution-NonCommercial-ShareAlike License. To view a copy of this license,
-% visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to
-% Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
-% This file is adapted from Todd Courtesan's resume, at
-% http://www.courtesan.com/todd/resume.html
-% }}}
-% preamble {{{
+% Created 2018-06-27 Wen 03:45
 \documentclass[letterpaper]{article}
-\setlength{\oddsidemargin}{-0.75in}
-\setlength{\evensidemargin}{-0.75in}
-\setlength{\textwidth}{8in}
-\setlength{\topmargin}{-0.75in}
-\setlength{\textheight}{10.5in}
-% }}}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+% <<< packages
+\RequirePackage{latexsym,amsmath,amssymb,charter,color,calc,hyperref,titlesec}
+\RequirePackage[empty]{fullpage}
+% >>>
+
+% <<< dimensions/margins
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\addtolength{\oddsidemargin}{-0.25in}
+\addtolength{\evensidemargin}{-0.25in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-0.25in}
+\addtolength{\textheight}{0.5in}
+% >>>
+
+% <<< other definitions
+\definecolor{my-gray}{gray}{0.90}
+\definecolor{url-gray}{gray}{0.25}
+% >>>
+
+%% Document header
+\newcommand{\resheader}[6]{
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}cr}
+    #3 & \textbf{\LARGE #1} & #5\\
+    #4 & \url{#2}           & #6\\
+    \end{tabular*}
+    \\
+    \vspace{0.1in}
+}
+
+%% Enumerations
+\def\labelitemi{--}
+
+%% Section Headings, etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\section}[1]{
+  {
+    \large \colorbox{my-gray}{
+      \begin{minipage}
+        {\textwidth-0.175in}
+        {\textbf{#1 \vphantom{p\^{E}}}}
+      \end{minipage}
+    }
+  }
+}
+
+\titleformat{\subsection} %command
+            [block] %shape
+            {\bfseries} %format
+            {} %label
+            {0pt} %sep
+            {} %before-code
+            [] %after-code
+
+\titlespacing{\subsection}{0pt}{5pt}{0pt}[{0pt}]
+
+\titleformat{\subsubsection} %command
+            [block] %shape
+            {\vspace{-2.4ex}\small\it\raggedleft} %format
+            {} %label
+            {0pt} %sep
+            {} %before-code
+            [] %after-code
+\titlespacing{\subsubsection}{0pt}{0pt}{0pt}[{0pt}]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\maketitle{}
+\hypersetup{colorlinks=true, urlcolor={url-gray}}
+\usepackage{enumitem}
+\setlist{leftmargin=0.25in,nosep}
+\usepackage{multicol}
+\date{}
+\title{Igor\_Pogorelko}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.3.1 (Org mode 8.2.10)}}
 \begin{document}
-\title{Igor Pogorelko}
+
 \maketitle
+\resheader{ Igor Pogorelko }{ email:i.pogorelko@gmail.com }{ phone: 0974946856 }{ skype: i.pogorelko }{ Kharkiv }{ Ukraine }
+\section{Personal statement}
+\label{sec-1-1}
+\\
+Highly motivated specialist with more than 10 years of experience in IT. Good team-player easily acquiring new knowledge and grasping new technologies.\\
+Result-oriented, proactive and responsible person. 
+Substantial experience in system administration (Linux(Centos/Gentoo/Debian/Ubuntu) with special focus on Web and server infrastructure) and is well-familiar with various CMS-systems , development, deployment , support  of websites, E-commerce engines and solutions.\\
+\vspace*{1em plus .6em minus .5em}
+Objective:  DevOps Engineer\\
+\section{Expertise}
+\label{sec-1-1}
+\\
+Hosting development, configuration and administration using Apache, Nginx and MySQL, deploying Web sites on the hosting. Developing Bash and Python scripts for synchronizing of the system components , access rights management, sites back-up, etc.\\
+Full development lifecycle support including requirements clarification and management, development, deployment and support (including SEO) of simple Web-sites using Joomla, Wordpress, Drupal, and e-commerce sites based on Virtuemart(for Joomla) and osCommerce (in general over 15 Web sites). Database configuration and support using MY SQL, MariaDB and Postgres SQL (for the Web sites developed).\\
+Administration of Bind DNS Server, configuration and administration Postfix mail servers with support Spamassassin, Clamav etc, dhcp,proftpd, monitoring systems through snmp: mrtg, cacti. Logwatch. Version Control System using Git and SVN.
+\section{Skills}
+\label{sec-1}\\
+\label{sec-1-1}
+\textbf{Specialties:} Maintenance Engineer, Linux Administrator, Web developing, website and server scripting\\
+\label{sec-1-2}
+\textbf{Operations Systems:} Debian, CentOS, Ubuntu, Gentoo, openSUSE, Red Hat, FreeBSD, Fedora, Windows Server\\
+\label{sec-1-3}
+\textbf{Programming language:} PHP, Mysql, Javascript, Bash, Python, Object Pascal, HTML\\
+\label{sec-1-4}
+\textbf{Website CMS:} Joomla, Wordpress, OsCommerce, Magento, Opencart\\
+\label{sec-1-5}
+\textbf{Web Servers:} Apache, Nginx, lighttpd\\
+\label{sec-1-6}
+\textbf{Control Panels:} Cpanel, WHM, Plesk, Virtualmin\\
+\label{sec-1-7}
+\textbf{Databases:} Mysql, Postgresql, MSSQL\\
+\label{sec-1-8}
+\textbf{Monitoring systems:} Nagios, Zabbix, Cacti\\
+\label{sec-1-9}
+\textbf{Network file systems:} NFS, GlusterFS\\
+\label{sec-1-10}
+\textbf{Virtualization:} KVM, Xen, VMware Workstation, OpenVZ, LXC\\
+\label{sec-1-11}
+\textbf{Other skills:} Git, SVN, Jenkins, Docker, Ansible, iptables, LDAP, Bind, Squid, Samba, Mantis\\
+\section{Work experience}
+\label{sec-2}
+\subsection{\ul{December 2010 – Present}. System Administrator of Hosting/Deployment Engineer at UK based web ecommerce developing company}
+\label{sec-2-1}
+\subsubsection{}
+\label{sec-2-1-1}
+\textbf{Project:} infrastructure administration and support Hosting Services for IT company\\
+\textbf{Project Role:}  Server Administrator/Deployment Engineer\\
+\textbf{Responsibilities:}\\
+\begin{itemize}
+\item Development of scripts using bash and python for server and infrastructure tasks, deploying them to hosts using Jenkins and Git
+\item Optimization of the infrastructure deployment and automation of installing the necessary packages using Ansible, creating a simple playbooks and roles for installation backup system to the client host, monitoring, etc.
+\item Creation and implementation of web solutions, servers infrastructure for  necessities of customers, migration the web commerce platforms.
+\item Detection of SQL, XSS and other vulnerabilities on the compromised web sites, restoring and protection of website engines and web settings
+\item Creation, deployment and support hosting accounts based on KVM, OpenVZ, LXC system.
+\item Technical support of UK based customers via email, Skype and customer support system.
+\item Management of DNS (Bind) and mail services(Postfix, Qmail, Exim), SVN, Docker, DHCP, VPN, etc.
+\item Web sites development, OsCommerce, Typo3, Magento, upgrade the site functionality to the new versions of PHP, bug fixing.
+\item SSL Certificates registration and deployment to the websites.
+\end{itemize}
+\textbf{Languages:} Bash, Power Shell, PHP, Python,  SQL\\
+\textbf{Technologies:} SSL, KVM, XEN, VPN\\
+\textbf{Tools:} Proxmox, Cpanel, Virtualmin, WHMCS, Ansible, Jenkins, Apache, Nginx, Zabbix, GlusterFS\\
+\textbf{Databases:} MySQL, PostgreSQL\\
+\textbf{Source control:} SVN, Git\\
+\textbf{OS:} CentOS, Debian, Ubuntu, Redhat, FreeBSD\\
+\subsection{July 2007 – November 2010. Ametrin Co Ltd, Kharkiv, Ukraine. System Administrator/Web developer.}
+\label{sec-2-2}
+\subsubsection{}
+\label{sec-2-2-1}
+\textbf{Project:} administration and support of IT infrastructure and Hosting Services\\
+\textbf{Project Role:}  Server Administrator/Web developer\\
+\textbf{Responsibilities:}\\
+\begin{itemize}
+\item Establishment and further development of the hosting server (apache2 mysql proftpd) (35 sites), as well as writing scripts to synchronize its work and automatic backup of content separately these resources (content and database mysql).
+\item Creation, deployment and support of corporate and brand-oriented Web sites and blogs (over 15 Web sites) based on Joomla, WordPress, Slaed.
+\item Creation, deployment and support of ecommerce solution based on Virtuemart with additional integration with 1C system for shop items import and update, adding statistics system and SEO for the e-shop. The shop has been put in operation and brings the company stable flow of about 100 orders a month with almost no initial investments in SEO.
+\item Management of mail servers, Postfix Clamav Spamassasin, writing scripts in bash for solving production problems.
+\item Management of DNS server BIND, and LDAP, SAMBA, DHCP, VPN, configuration and traffic distribution by using SQUID, the output statistics for users on the web via lightsquid.
+\item Administration of local area networks and servers OS Linux Gentoo, routing, iptables, masquerading.
+\item Set-up of services MRTG, logwatch, the registration system applications Mantis (database Postgres), the help system based on Mediawiki.
+\item Administration of AD and Microsoft Exchange on Windows Server 2003.
+\end{itemize}
+\textbf{Languages:} Bash, PHP,  HTML, SQL\\
+\textbf{Technologies:} DNS, LDAP, VPN\\
+\textbf{Tools:}  Apache, Nginx, Squid, Mantis, Cacti\\
+\textbf{Databases:} MySQL, PostgreSQL\\
+\textbf{OS:} Gentoo, Debian, Windows Server 2003\\
+\subsection{March 2007 – June 2007:  System Administrator, «Budman» Ltd., Kharkiv, Ukraine.}
+\label{sec-2-3}
+\subsubsection{}
+\label{sec-2-3-1}
+\textbf{Project:} administration and support of IT infrastructure\\
+\textbf{Project Role:}  System Administrator\\
+\textbf{Responsibilities:}
+\begin{itemize}
+\item Corporate Web site support (including bringing small changes into the site).
+\item Administration Unix / Linux.
+\item OS and Software installation and support.
+\item CCTV Videonet Support.
+\item Set-up, assembling and maintenance of computer and office equipment.
+\item Laying local telephone and network.
+\end{itemize}
+\textbf{Languages:} Bash, HTML, SQL\\
+\textbf{Technologies:} DNS, VPN\\
+\textbf{Tools:}  Squid, Monit, Apache, Mysql\\
+\textbf{OS:} Fedora, FreeBSD\\
+\subsection{December 2004 – February 2007: Computer systems engineer, ISP Vokar Telecom, Kharkiv, Ukraine.}
+\label{sec-2-4}
+\subsubsection{}
+\label{sec-2-4-1}
+\textbf{Project:} ISP infrastructure support\\
+\textbf{Project Role:}  Computer systems engineer.\\
+\textbf{Responsibilities:}
+\begin{itemize}
+\item Creation of corporate Web-sites based on PhpNuke, Slaed, site support and customization.
+\item Advising on configuration and use of software associated with the network and the Internet.
+\item Operating systems installation and configuration (Windows 98,2000, XP).
+\item Assembly and maintenance of computer and office equipment.
+\item Monitoring and remote work via ssh with routers, proxy, mail, Web and VPN-server on Linux.
+\end{itemize}
+\textbf{Languages:} Bash, PHP, HTML, SQL\\
+\textbf{Technologies:} DNS, VPN\\
+\textbf{Tools:}  Squid, Apache, Mysql, Postfix\\
+\textbf{OS:} Centos, ASPLinux, FreeBSD, Windows 2000\\
+%\section{Projects}
+\section{Education}
+\label{sec-4}
+\subsection{Kharkivs'kij Nacional'nij Universytet Radioelectroniki, Kharkiv, Ukraine}
+\label{sec-4-1}
+Master degree in Electronics, Banking Systems Engineer, 1998-2003\\
+\subsection{Kharkivs'kij Nacional'nij Universytet Radioelectroniki, Kharkiv, Ukraine}
+\label{sec-4-1}
+Master degree in Economics, Engineer Economist, 2003-2005\\
+\subsection{Courses:}
+\label{sec-4-1-2}
+Professional Python Django courses in ITBursa, Kharkiv 2014-2015\\
+L3 Linux high level. IT education center, Kiev 2016-2017\\
+\section{Additional Information}
+Languages:  English(Intermediate), Russian(Native), Ukrainian(Native), Polish(elementary)\\
+Driving License: B Category\\
+Opportunity to work trips: Foreign passport\\
+% Emacs 25.3.1 (Org mode 8.2.10)
 \end{document}
